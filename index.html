@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>GLOBE - Your World, One Tap Away</title>
+      <style>
+                * {
+                              margin: 0;
+                              padding: 0;
+                              box-sizing: border-box;
+                }
+
+                body {
+                              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+                              background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+                              min-height: 100vh;
+                              color: #ffffff;
+                }
+
+                .container {
+                              max-width: 1200px;
+                              margin: 0 auto;
+                              padding: 20px;
+                }
+
+                header {
+                              text-align: center;
+                              padding: 60px 20px;
+                }
+
+                .logo {
+                              font-size: 4rem;
+                              margin-bottom: 10px;
+                }
+
+                h1 {
+                              font-size: 3.5rem;
+                              font-weight: 700;
+                              background: linear-gradient(90deg, #00d4ff, #7c3aed);
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;
+                              background-clip: text;
+                              margin-bottom: 20px;
+                }
+
+                .tagline {
+                              font-size: 1.5rem;
+                              color: #a0aec0;
+                              margin-bottom: 40px;
+                }
+
+                .hero {
+                              text-align: center;
+                              padding: 40px 20px;
+                }
+
+                .app-preview {
+                              max-width: 300px;
+                              margin: 0 auto 40px;
+                              background: rgba(255, 255, 255, 0.1);
+                              border-radius: 30px;
+                              padding: 20px;
+                              box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+                }
+
+                .app-preview img {
+                              width: 100%;
+                              border-radius: 20px;
+                }
+
+                .features {
+                              display: grid;
+                              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                              gap: 30px;
+                              padding: 60px 20px;
+                }
+
+                .feature-card {
+                              background: rgba(255, 255, 255, 0.05);
+                              border: 1px solid rgba(255, 255, 255, 0.1);
+                              border-radius: 20px;
+                              padding: 30px;
+                              text-align: center;
+                              transition: transform 0.3s, box-shadow 0.3s;
+                }
+
+                .feature-card:hover {
+                              transform: translateY(-5px);
+                              box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+                }
+
+                .feature-icon {
+                              font-size: 3rem;
+                              margin-bottom: 20px;
+                }
+
+                .feature-card h3 {
+                              font-size: 1.3rem;
+                              margin-bottom: 15px;
+                              color: #00d4ff;
+                }
+
+                .feature-card p {
+                              color: #a0aec0;
+                              line-height: 1.6;
+                }
+
+                .download-section {
+                              text-align: center;
+                              padding: 60px 20px;
+                }
+
+                .download-btn {
+                              display: inline-block;
+                              background: linear-gradient(90deg, #00d4ff, #7c3aed);
+                              color: white;
+                              text-decoration: none;
+                              padding: 18px 50px;
+                              border-radius: 50px;
+                              font-size: 1.2rem;
+                              font-weight: 600;
+                              transition: transform 0.3s, box-shadow 0.3s;
+                }
+
+                .download-btn:hover {
+                              transform: scale(1.05);
+                              box-shadow: 0 15px 30px rgba(0, 212, 255, 0.3);
+                }
+
+                footer {
+                              text-align: center;
+                              padding: 40px 20px;
+                              border-top: 1px solid rgba(255, 255, 255, 0.1);
+                              color: #a0aec0;
+                }
+            </style>
+  </head>
+  <body>
+        <div class="container">
+                  <header>
+                                <div class="logo">🌍</div>div>
+                                <h1>GLOBE</h1>
+                              <p class="tagline">Your World, One Tap Away</p>p>
+                  </header>
+                
+                <section class="hero">
+                            <div class="app-preview">
+                                            <div style="height: 400px; background: linear-gradient(180deg, #2d3748 0%, #1a202c 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 5rem;">
+                                                                🌐
+                                            </div>div>
+                            </div>div>
+                </section>section>
+                
+                <section class="features">
+                            <div class="feature-card">
+                                            <div class="feature-icon">📍</div>div>
+                                            <h3>Discover Places</h3>
+                                            <p>Explore amazing locations around the world with detailed information and stunning visuals.</p>
+                            </div>div>
+                            
+                            <div class="feature-card">
+                                            <div class="feature-icon">🗺️</div>div>
+                                            <h3>Interactive Maps</h3>
+                                            <p>Navigate through beautiful, interactive maps with smooth gestures and real-time updates.</p>
+                            </div>div>
+                            
+                            <div class="feature-card">
+                                            <div class="feature-icon">📸</div>div>
+                                            <h3>Share Moments</h3>
+                                            <p>Capture and share your travel experiences with friends and the GLOBE community.</p>
+                            </div>div>
+                            
+                            <div class="feature-card">
+                                            <div class="feature-icon">🔔</div>div>
+                                            <h3>Smart Notifications</h3>
+                                            <p>Get personalized recommendations and updates about places you love.</p>
+                            </div>div>
+                </section>section>
+                
+                <section class="download-section">
+                            <h2 style="font-size: 2rem; margin-bottom: 30px;">Ready to explore?</h2>
+                            <a href="#" class="download-btn">Download on App Store</a>a>
+                </section>section>
+                
+                <footer>
+                              <p>&copy; 2024 GLOBE. All rights reserved.</p>p>
+                </footer>
+        </div>div>
+  </body>
+</html>html>
+                </footer></p></p></h3></h1>
+                  </header>
+  </body>
+      </style></title>
+  </head>
