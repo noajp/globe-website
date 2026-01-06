@@ -1,461 +1,417 @@
-
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>GLOBE - Break free from the timeline,</title>
-      <style>
-                * {
-                              margin: 0;
-                              padding: 0;
-                              box-sizing: border-box;
-                }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBE - Break free from the timeline,</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-                body {
-                              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-                              background-color: #000000;
-                              min-height: 100vh;
-                              color: #ffffff;
-                }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        background-color: #000000;
+        min-height: 100vh;
+        color: #ffffff;
+      }
 
-                .container {
-                              max-width: 1400px;
-                              margin: 0 auto;
-                              padding: 0 40px;
-                }
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
 
-                /* Header */
-                header {
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
-                              padding: 20px 40px;
-                }
+      /* Header */
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+      }
 
-                .logo {
-                              font-size: 1.8rem;
-                              font-weight: 700;
-                              color: #ffffff;
-                }
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
 
-                .nav-buttons {
-                              display: flex;
-                              gap: 12px;
-                }
+      .nav-buttons {
+        display: flex;
+        gap: 12px;
+      }
 
-                .nav-btn {
-                              padding: 12px 24px;
-                              border-radius: 50px;
-                              font-size: 0.95rem;
-                              font-weight: 600;
-                              text-decoration: none;
-                              transition: all 0.2s;
-                }
+      .nav-btn {
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
 
-                .nav-btn-dark {
-                              background-color: #1a1a1a;
-                              color: #ffffff;
-                              border: none;
-                }
+      .nav-btn-dark {
+        background-color: #1a1a1a;
+        color: #ffffff;
+        border: none;
+      }
 
-                .nav-btn-dark:hover {
-                              background-color: #333;
-                }
+      .nav-btn-dark:hover {
+        background-color: #333;
+      }
 
-                .nav-btn-light {
-                              background-color: #ffffff;
-                              color: #000000;
-                              border: none;
-                }
+      .nav-btn-light {
+        background-color: #ffffff;
+        color: #000000;
+        border: none;
+      }
 
-                .nav-btn-light:hover {
-                              background-color: #e0e0e0;
-                }
+      .nav-btn-light:hover {
+        background-color: #e0e0e0;
+      }
 
-                /* Main Content */
-                .main-content {
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
-                              padding: 60px 40px 80px;
-                              min-height: calc(100vh - 200px);
-                }
+      /* Main Content */
+      .main-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 60px 40px 80px;
+        min-height: calc(100vh - 200px);
+      }
 
-                .text-content {
-                              flex: 1;
-                              max-width: 600px;
-                }
+      .text-content {
+        flex: 1;
+        max-width: 600px;
+      }
 
-                .main-title {
-                              font-size: 4.5rem;
-                              font-weight: 700;
-                              line-height: 1.1;
-                              margin-bottom: 40px;
-                }
+      .main-title {
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 40px;
+      }
 
-                .features-list {
-                              list-style: none;
-                              margin-bottom: 30px;
-                }
+      .features-list {
+        list-style: none;
+        margin-bottom: 30px;
+      }
 
-                          .section-title {
-                                      font-size: 3rem;
-                                      font-weight: 700;
-                                      line-height: 1.2;
-                                      margin-bottom: 20px;
-                }
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+      }
 
-                              /* Second Section - BeReal Style */
-                              .second-section {
-                                                flex-direction: column;
-                                                align-items: flex-end;
-                                                text-align: left;
-                                                padding: 60px 20px;
-                                                min-height: auto;
-                              }
+      /* Two Column Section */
+      .two-column-section {
+        display: flex;
+        gap: 60px;
+        padding: 60px 40px;
+      }
 
-                              .second-section .text-content {
-                                                max-width: 500px;
-                                                margin-bottom: 40px;
-                              }
+      .column {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
 
-                              .second-section .phone-mockup {
-                                                flex: none;
-                                                max-width: 350px;
-                                                width: 100%;
-                                                overflow: hidden;
-                              }
+      .column-left {
+        align-items: flex-start;
+        text-align: left;
+      }
 
-                              .second-section .phone-frame {
-                                                width: 100%;
-                                                max-width: 350px;
-                                                height: auto;
-                                                aspect-ratio: 9/16;
-                                                padding: 8px;
-                                                border-radius: 30px;
-                                                overflow: hidden;
-                              }
+      .column-right {
+        align-items: flex-end;
+        text-align: right;
+      }
 
-                              .second-section .phone-screen {
-                                                border-radius: 25px;
-                              }
+      .column .text-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
 
-                              .second-section .app-screenshot {
-                                                border-radius: 25px;
-                                                max-width: 350px;
-                                                max-height: 600px;
-                                                object-fit: cover;
-                                                width: 100%;
-                              }
+      .column-image {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        aspect-ratio: 1;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+      }
 
-                              .bereal-image {
-                                                width: 500px;
-                                                height: 500px;
-                                                border-radius: 20px;
-                                                object-fit: cover;
-                                                box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
-                              }
+      .features-list li {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
 
-                    /* Third Section - Text Top, Image Bottom */
-                    .third-section {
-                                      flex-direction: column;
-                                      align-items: flex-end;
-                                      text-align: right;
-                                      padding: 60px 20px;
-                                      min-height: auto;
-                    }
+      .feature-emoji {
+        font-size: 2rem;
+      }
 
-                    .third-section .text-content {
-                                      max-width: 500px;
-                                      margin-bottom: 40px;
-                    }
+      .description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #ffffff;
+        margin-bottom: 30px;
+      }
 
-                .features-list li {
-                              font-size: 2rem;
-                              font-weight: 600;
-                              margin-bottom: 8px;
-                              display: flex;
-                              align-items: center;
-                              gap: 15px;
-                }
+      .cta-btn {
+        display: inline-block;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
 
-                .feature-emoji {
-                              font-size: 2rem;
-                }
+      .cta-btn:hover {
+        background-color: #e0e0e0;
+        transform: scale(1.02);
+      }
 
-                .description {
-                              font-size: 1.1rem;
-                              line-height: 1.6;
-                              color: #ffffff;
-                              margin-bottom: 30px;
-                              max-width: 500px;
-                }
+      /* Phone Mockup */
+      .phone-mockup {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-                .cta-btn {
-                              display: inline-block;
-                              background-color: #ffffff;
-                              color: #000000;
-                              padding: 16px 32px;
-                              border-radius: 50px;
-                              font-size: 1.1rem;
-                              font-weight: 600;
-                              text-decoration: none;
-                              transition: all 0.2s;
-                }
+      .phone-frame {
+        width: 320px;
+        height: 650px;
+        background: #1a1a1a;
+        border-radius: 45px;
+        padding: 12px;
+        box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+      }
 
-                .cta-btn:hover {
-                              background-color: #e0e0e0;
-                              transform: scale(1.02);
-                }
+      .phone-screen {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
+        border-radius: 35px;
+        overflow: hidden;
+        position: relative;
+      }
 
-                /* Phone Mockup */
-                .phone-mockup {
-                              flex: 1;
-                              display: flex;
-                              justify-content: center;
-                              align-items: center;
-                }
+      .app-screenshot {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 35px;
+      }
 
-                .phone-frame {
-                              width: 320px;
-                              height: 650px;
-                              background: #1a1a1a;
-                              border-radius: 45px;
-                              padding: 12px;
-                              box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
-                }
+      /* Footer */
+      footer {
+        padding: 30px 40px;
+        border-top: 1px solid #222;
+      }
 
-                .phone-screen {
-                              width: 100%;
-                              height: 100%;
-                              background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 100%);
-                              border-radius: 35px;
-                              overflow: hidden;
-                              position: relative;
-                }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
 
-                .phone-notch {
-                              width: 120px;
-                              height: 30px;
-                              background: #000;
-                              border-radius: 0 0 20px 20px;
-                              margin: 0 auto;
-                }
+      .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
 
-                .phone-header {
-                              text-align: center;
-                              padding: 15px;
-                              font-weight: 600;
-                              font-size: 1.1rem;
-                }
+      .copyright {
+        color: #888;
+        font-size: 0.9rem;
+      }
 
-                .phone-content {
-                              padding: 20px;
-                              display: flex;
-                              flex-direction: column;
-                              align-items: center;
-                              justify-content: center;
-                              height: calc(100% - 100px);
-                }
+      .footer-links {
+        display: flex;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
 
-                .app-screenshot {
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              border-radius: 35px;
-                }
+      .footer-links a {
+        color: #888;
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.2s;
+      }
 
-                .placeholder-image {
-                              width: 100%;
-                              height: 400px;
-                              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                              border-radius: 20px;
-                              display: flex;
-                              align-items: center;
-                              justify-content: center;
-                              font-size: 4rem;
-                }
+      .footer-links a:hover {
+        color: #fff;
+      }
 
-                .phone-home-indicator {
-                              width: 140px;
-                              height: 5px;
-                              background: #fff;
-                              border-radius: 3px;
-                              margin: 20px auto 10px;
-                }
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .main-content {
+          flex-direction: column;
+          text-align: center;
+          padding: 40px 20px;
+        }
 
-                /* Footer */
-                footer {
-                              padding: 30px 40px;
-                              border-top: 1px solid #222;
-                }
+        .text-content {
+          margin-bottom: 50px;
+        }
 
-                .footer-content {
-                              display: flex;
-                              justify-content: space-between;
-                              align-items: center;
-                              flex-wrap: wrap;
-                              gap: 20px;
-                }
+        .main-title {
+          font-size: 3rem;
+        }
 
-                .footer-left {
-                              display: flex;
-                              align-items: center;
-                              gap: 30px;
-                }
+        .features-list li {
+          justify-content: center;
+          font-size: 1.5rem;
+        }
 
-                .copyright {
-                              color: #888;
-                              font-size: 0.9rem;
-                }
+        .description {
+          margin-left: auto;
+          margin-right: auto;
+        }
 
-                .footer-links {
-                              display: flex;
-                              gap: 25px;
-                              flex-wrap: wrap;
-                }
+        .phone-frame {
+          width: 280px;
+          height: 570px;
+        }
 
-                .footer-links a {
-                              color: #888;
-                              text-decoration: none;
-                              font-size: 0.9rem;
-                              transition: color 0.2s;
-                }
+        .two-column-section {
+          flex-direction: column;
+          gap: 60px;
+          padding: 40px 20px;
+        }
 
-                .footer-links a:hover {
-                              color: #fff;
-                }
+        .column-left,
+        .column-right {
+          align-items: center;
+          text-align: center;
+        }
 
-                /* Responsive */
-                @media (max-width: 1024px) {
-                              .main-content {
-                                                flex-direction: column;
-                                                text-align: center;
-                                                padding: 40px 20px;
-                              }
+        .column-image {
+          max-width: 400px;
+        }
+      }
 
-                              .text-content {
-                                                margin-bottom: 50px;
-                              }
+      @media (max-width: 640px) {
+        header {
+          padding: 15px 20px;
+        }
 
-                              .main-title {
-                                                font-size: 3rem;
-                              }
+        .logo {
+          font-size: 1.4rem;
+        }
 
-                              .features-list li {
-                                                justify-content: center;
-                                                font-size: 1.5rem;
-                              }
+        .nav-btn {
+          padding: 10px 18px;
+          font-size: 0.85rem;
+        }
 
-                              .description {
-                                                margin-left: auto;
-                                                margin-right: auto;
-                              }
+        .main-title {
+          font-size: 2.2rem;
+        }
 
-                              .phone-frame {
-                                                width: 280px;
-                                                height: 570px;
-                              }
-                }
+        .features-list li {
+          font-size: 1.2rem;
+        }
 
-                @media (max-width: 640px) {
-                              header {
-                                                padding: 15px 20px;
-                              }
+        .section-title {
+          font-size: 1.8rem;
+        }
 
-                              .logo {
-                                                font-size: 1.4rem;
-                              }
+        .footer-content {
+          flex-direction: column;
+          text-align: center;
+        }
 
-                              .nav-btn {
-                                                padding: 10px 18px;
-                                                font-size: 0.85rem;
-                              }
+        .footer-left {
+          flex-direction: column;
+        }
 
-                              .main-title {
-                                                font-size: 2.2rem;
-                              }
-
-                              .features-list li {
-                                                font-size: 1.2rem;
-                              }
-
-                              .footer-content {
-                                                flex-direction: column;
-                                                text-align: center;
-                              }
-
-                              .footer-left {
-                                                flex-direction: column;
-                              }
-                }
-            </style>
+        .column-image {
+          max-width: 300px;
+        }
+      }
+    </style>
   </head>
   <body>
-        <header>
-                  <div class="logo">GLOBE</div>
-                  <div class="nav-buttons">
-                                <a href="#" class="nav-btn nav-btn-light">Get the App</a>
-                  </div>
-        </header>
+    <header>
+      <div class="logo">GLOBE</div>
+      <div class="nav-buttons">
+        <a href="#" class="nav-btn nav-btn-light">Get the App</a>
+      </div>
+    </header>
 
-        <main class="container">
-                  <div class="main-content">
-                                <div class="text-content">
-                                                  <h1 class="main-title">Break free from the timeline,<br>expand your world</h1>
-                                                  <ul class="features-list">
-                                                                        <li><span class="feature-emoji">🌍</span> Discover new places</li>
-                                                                      <li><span class="feature-emoji">📍</span> Share your location</li>
-                                                  </ul>
-                                                <p class="description">
-                                                    Discover amazing places around you and share your adventures with friends. GLOBE makes exploring your world simple and fun.
-                                                </p>
-                                                <a href="#" class="cta-btn">Get The App</a>
-                                </div>
-                              <div class="phone-mockup">
-                                              <div class="phone-frame">
-                                                                  <div class="phone-screen">
-                                                                                                                        <img src="Simulator Screenshot - iPhone 17 - 2026-01-05 at 22.55.27.png" alt="GLOBE App Screenshot" class="app-screenshot">
-                                                                  </div>
-                                              </div>
-                              </div>
-                  </div>
+    <main class="container">
+      <div class="main-content">
+        <div class="text-content">
+          <h1 class="main-title">Break free from the timeline,<br>expand your world</h1>
+          <ul class="features-list">
+            <li><span class="feature-emoji">🌍</span> Discover new places</li>
+            <li><span class="feature-emoji">📍</span> Share your location</li>
+          </ul>
+          <p class="description">
+            Discover amazing places around you and share your adventures with friends. GLOBE makes exploring your world simple and fun.
+          </p>
+          <a href="#" class="cta-btn">Get The App</a>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <img src="Simulator Screenshot - iPhone 17 - 2026-01-05 at 22.55.27.png" alt="GLOBE App Screenshot" class="app-screenshot">
+            </div>
+          </div>
+        </div>
+      </div>
 
-                <!-- Second Section -->
-                <div class="main-content second-section">
-                  <img src="IMG_0730.jpg" alt="GLOBE App Screenshot 2" class="bereal-image">
-                          <div class="text-content">
-                                      <h2 class="section-title">Drop your thoughts on the map</h2>
-                                      <p class="description">
-                                                    Share what's on your mind at any location. Post text messages directly on the 3D map and see what others are saying around you in real-time.
-                                      </p>
-                          </div>
-                            </div>
+      <!-- Two Column Section -->
+      <div class="two-column-section">
+        <!-- Left Column -->
+        <div class="column column-left">
+          <img src="IMG_0730.jpg" alt="GLOBE App Screenshot 2" class="column-image">
+          <div class="text-content">
+            <h2 class="section-title">Drop your thoughts on the map</h2>
+            <p class="description">
+              Share what's on your mind at any location. Post text messages directly on the 3D map and see what others are saying around you in real-time.
+            </p>
+          </div>
+        </div>
 
-                  <!-- Third Section -->
-                  <div class="main-content third-section">
-                                <div class="text-content">
-                                                  <h2 class="section-title">Share exciting photos in exciting places!</h2>
-                                                  <p class="description">
-                                                                        Spark your creativity and expand your world!
-                                                  </p>
-                                </div>
-                                <img src="IMG_0734.jpg" alt="GLOBE App Screenshot 3" class="bereal-image">
-                  </div>
-        </main>
-  
-    <footer>                <div class="footer-content">
-                              <div class="footer-left">
-                                                <span class="copyright">© 2026 GLOBE</span>
-                              </div>
-                              <div class="footer-links">
-                                                <a href="#">Privacy Policy</a>
-                                                <a href="#">Terms</a>
-                                                <a href="#">Support</a>
-                                                <a href="#">Contact</a>
-                              </div>
-                </div>
-      </footer>
+        <!-- Right Column -->
+        <div class="column column-right">
+          <div class="text-content">
+            <h2 class="section-title">Share exciting photos in exciting places!</h2>
+            <p class="description">
+              Spark your creativity and expand your world!
+            </p>
+          </div>
+          <img src="IMG_0734.jpg" alt="GLOBE App Screenshot 3" class="column-image">
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-left">
+          <span class="copyright">© 2026 GLOBE</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
